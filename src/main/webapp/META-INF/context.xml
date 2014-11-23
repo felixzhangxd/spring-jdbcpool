@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/spring-jdbcpool" debug="0" reloadable="true" crossContext="true">
+  <Resource name="jdbc/spring_jdbcpool"
+      auth="Container"
+      type="javax.sql.DataSource"
+      factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+      initialSize="5"
+      maxActive="10"
+      maxIdle="3"
+      minIdle="1"
+      maxWait="5000"
+      testWhileIdle="true"
+      testOnBorrow="true"
+      testOnReturn="true"
+      validationQuery="SELECT 1"
+      validationInterval="30000"
+      timeBetweenEvictionRunsMillis="30000"
+      removeAbandoned="true"
+      removeAbandonedTimeout="120"
+      logAbandoned="true"
+      minEvictableIdleTimeMillis="30000"
+      jmxEnabled="true"
+      jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
+      driverClassName="com.mysql.jdbc.Driver"
+      url="jdbc:mysql://127.0.0.1:3306/spring_jdbcpool"
+      username="spring_jdbcpool"
+      password="spring_jdbcpool">
+  </Resource>   
+</Context>
